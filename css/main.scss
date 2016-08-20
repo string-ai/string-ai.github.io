@@ -1,0 +1,86 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+@import 'https://fonts.googleapis.com/css?family=Work+Sans:300,400,700';
+
+// Our variables
+$body-font: 'Work Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
+$text-color: #6B685A;
+$link-color: #0032FF;
+$text-color-dark: white;
+$link-color-dark: #EAF200;
+
+html{
+  height: 100%;
+}
+body{
+  font-family: $body-font;
+  color: $text-color;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+  background: transparent no-repeat center top url(/assets/images/bg-white.svg);
+  background-size: cover;
+  &.dark{
+    background: transparent no-repeat center bottom url(/assets/images/bg-blue.jpg);
+    color: $text-color-dark;
+    .logo{
+      background: transparent no-repeat top left url(/assets/images/logo-white.svg);
+
+    }
+    a{
+      color: $link-color-dark;
+    }
+  }
+}
+a{
+  color: $link-color;
+}
+
+nav{
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 25%;
+  width: 100%;
+
+
+}
+.logo{
+  background: transparent no-repeat top left url(/assets/images/logo-blue.svg);
+  height: 60px;
+  width: 140px;
+  margin: 40px 0 0;
+}
+.main{
+  flex-grow: 2;
+  align-self: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  h2{
+    font-weight: 300;
+    margin: 10px 0 40px;
+    font-size: 48px;
+    line-height: 1.5em;
+    @media (max-width: 1024px){
+      font-size: 36px;
+    }
+  }
+}
+footer{
+  height: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  ul{
+    display: block;
+    text-align: center;
+  }
+  a{
+    text-decoration: underline;
+  }
+}
